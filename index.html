@@ -330,4 +330,338 @@ console.log("Brasa Burger carregado 🍔🔥");
 </script>
 
 </body>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brasa Burger</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#111;
+    color:white;
+    scroll-behavior:smooth;
+}
+
+/* MENU */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.85);
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:28px;
+    letter-spacing:2px;
+    color:#ff9800;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff9800;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1550547660-d9450f859349') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+    position:relative;
+}
+
+.hero h1{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:4rem;
+    color:#ff9800;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:1.2rem;
+}
+
+.btn{
+    padding:12px 30px;
+    background:#ff9800;
+    border:none;
+    color:black;
+    font-weight:600;
+    cursor:pointer;
+    border-radius:5px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ffa733;
+}
+
+/* SECTIONS */
+section{
+    padding:100px 8%;
+    text-align:center;
+}
+
+h2{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:2.5rem;
+    margin-bottom:40px;
+    color:#ff9800;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.card{
+    background:#1c1c1c;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#ff9800;
+}
+
+.card p{
+    font-size:0.9rem;
+    opacity:0.8;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* RESPONSIVO */
+@media(max-width:1000px){
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">BRASA BURGER</div>
+    <nav>
+        <ul>
+            <li><a href="#burgers">Lanches</a></li>
+            <li><a href="#acompanhamentos">Acompanhamentos</a></li>
+            <li><a href="#bebidas">Bebidas</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>O MELHOR HAMBÚRGUER DA CIDADE</h1>
+        <p>Sabor artesanal feito na brasa 🔥</p>
+        <button class="btn" onclick="alert('Peça pelo WhatsApp!')">FAZER PEDIDO</button>
+    </div>
+</section>
+
+<!-- HAMBURGUERES -->
+<section id="burgers">
+    <h2>NOSSOS LANCHES</h2>
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+            <div class="card-content">
+                <h3>Brasa Clássico</h3>
+                <p>Pão brioche, hambúrguer 180g, queijo cheddar e molho especial.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1550317138-10000687a72b">
+            <div class="card-content">
+                <h3>Duplo Bacon</h3>
+                <p>Dois hambúrgueres, cheddar cremoso e bacon crocante.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b">
+            <div class="card-content">
+                <h3>Cheddar Explosion</h3>
+                <p>Molho cheddar extra, cebola caramelizada e carne premium.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9">
+            <div class="card-content">
+                <h3>Frango Crispy</h3>
+                <p>Filé de frango empanado, alface e maionese da casa.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1606755962773-d324e2b4a19f">
+            <div class="card-content">
+                <h3>Veggie Grill</h3>
+                <p>Hambúrguer vegetal grelhado com legumes frescos.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+            <div class="card-content">
+                <h3>Picanha Supreme</h3>
+                <p>Blend de picanha, queijo prato e molho barbecue.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6">
+            <div class="card-content">
+                <h3>Monster Burger</h3>
+                <p>Triplo hambúrguer, cheddar, bacon e onion rings.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ACOMPANHAMENTOS -->
+<section id="acompanhamentos">
+    <h2>ACOMPANHAMENTOS</h2>
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f">
+            <div class="card-content">
+                <h3>Batata Frita</h3>
+                <p>Porção crocante e dourada.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1606756790138-261d2b21cd51">
+            <div class="card-content">
+                <h3>Cebola Empanada</h3>
+                <p>Onion rings crocantes e saborosas.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- BEBIDAS -->
+<section id="bebidas">
+    <h2>BEBIDAS</h2>
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a">
+            <div class="card-content">
+                <h3>Refrigerante</h3>
+                <p>Lata 350ml - Coca, Guaraná ou Sprite.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888">
+            <div class="card-content">
+                <h3>Suco Natural</h3>
+                <p>Laranja, Abacaxi ou Maracujá.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1564419320461-6870880221ad">
+            <div class="card-content">
+                <h3>Água</h3>
+                <p>Com ou sem gás.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+console.log("Brasa Burger carregado 🍔🔥");
+</script>
+
+</body>
+
 </html>
